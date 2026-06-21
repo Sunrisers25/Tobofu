@@ -10,7 +10,7 @@ const testimonials = [
     role: 'Married · November 2024',
     city: 'Bengaluru',
     content:
-      'I had all but given up. Tobofu was my last attempt — and within three weeks I matched with someone who felt like I had written him into existence.',
+      'I had all but given up. Samanvaya Bandhan was my last attempt — and within three weeks I matched with someone who felt like I had written him into existence.',
     rating: 5,
     img: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=80&h=80&fit=crop&crop=face',
   },
@@ -28,7 +28,7 @@ const testimonials = [
     role: 'Married · April 2024',
     city: 'Kochi',
     content:
-      'My parents were involved from the start. Tobofu gives families space to participate without pressure. That balance made all the difference for us.',
+      'My parents were involved from the start. Samanvaya Bandhan gives families space to participate without pressure. That balance made all the difference for us.',
     rating: 5,
     img: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face',
   },

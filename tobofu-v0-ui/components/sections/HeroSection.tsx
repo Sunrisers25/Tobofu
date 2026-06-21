@@ -118,7 +118,7 @@ export function HeroSection() {
                 className="mt-7 text-base sm:text-lg leading-relaxed w-full max-w-lg"
                 style={{ color: '#3A1F1A' }}
               >
-                Tobofu blends the wisdom of tradition with the precision of AI — to help you
+                Samanvaya Bandhan blends the wisdom of tradition with the precision of AI — to help you
                 find a partner worthy of a lifetime, not just a moment.
               </motion.p>
 
@@ -192,7 +192,7 @@ export function HeroSection() {
                 <div className="absolute bottom-5 left-5 right-5">
                   <div className="glass rounded-2xl px-4 py-3">
                     <p className="text-xs uppercase tracking-widest mb-0.5" style={{ color: '#5C4A42' }}>
-                      Matched by Tobofu
+                      Matched by Samanvaya Bandhan
                     </p>
                     <p
                       className="text-base font-medium"

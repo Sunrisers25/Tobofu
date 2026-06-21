@@ -71,7 +71,7 @@ export function FeaturesSection() {
           transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-2xl mb-16 md:mb-20"
         >
-          <p className="badge-maroon mb-5">Why Tobofu</p>
+          <p className="badge-maroon mb-5">Why Samanvaya Bandhan</p>
           <h2
             className="text-balance text-section-responsive"
             style={{

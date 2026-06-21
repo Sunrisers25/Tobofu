@@ -11,7 +11,7 @@ const stories = [
     wedding: 'June 2024 · Chennai',
     duration: 'Matched in November — engaged in March',
     quote:
-      '"We had both been on other platforms for years. Tobofu felt different from the first week — the matches were thoughtful, not just filters. Sanjay sent me a voice note instead of a text. That was the moment."',
+      '"We had both been on other platforms for years. Samanvaya Bandhan felt different from the first week — the matches were thoughtful, not just filters. Sanjay sent me a voice note instead of a text. That was the moment."',
     detail: 'Kavya is an ISRO scientist. Sanjay runs a sustainable architecture firm. Their compatibility score was 97 — their families agreed.',
     heroImg:
       'https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?w=1200&h=800&fit=crop&crop=center',

@@ -13,7 +13,7 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'Tobofu — Where Souls Find Each Other',
+  title: 'Samanvaya Bandhan — Where Souls Find Each Other',
   description: 'India\'s most trusted AI-powered matrimonial platform. Verified profiles, deep compatibility, lifelong commitment.',
   generator: 'v0.app',
   icons: {

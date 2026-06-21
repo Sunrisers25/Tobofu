@@ -15,7 +15,7 @@ interface NavbarProps {
 const navLinks = [
   { href: '#how-it-works', label: 'How It Works' },
   { href: '#success-stories', label: 'Success Stories' },
-  { href: '#features', label: 'Why Tobofu' },
+  { href: '#features', label: 'Why Samanvaya Bandhan' },
 ]
 
 export function Navbar({ isDashboard = false }: NavbarProps) {
@@ -104,7 +104,7 @@ export function Navbar({ isDashboard = false }: NavbarProps) {
               className="text-xl font-medium tracking-tight"
               style={{ fontFamily: 'var(--font-heading)', color: 'var(--foreground)' }}
             >
-              Tobofu
+              Samanvaya Bandhan
             </span>
           </Link>
 

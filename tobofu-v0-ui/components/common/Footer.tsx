@@ -62,7 +62,7 @@ export function Footer() {
                 className="text-xl font-medium"
                 style={{ fontFamily: 'var(--font-heading)', color: '#FAF7F2' }}
               >
-                Tobofu
+                Samanvaya Bandhan
               </span>
             </div>
             <p className="text-sm leading-relaxed" style={{ color: 'rgba(250,247,242,0.75)' }}>
@@ -135,7 +135,7 @@ export function Footer() {
           style={{ borderColor: 'rgba(250,247,242,0.1)' }}
         >
           <p className="text-xs" style={{ color: 'rgba(250,247,242,0.60)' }}>
-            &copy; {year} Tobofu Technologies Pvt. Ltd. All rights reserved.
+            &copy; {year} Samanvaya Bandhan Technologies Pvt. Ltd. All rights reserved.
           </p>
           <p className="text-xs flex items-center gap-1.5" style={{ color: 'rgba(250,247,242,0.60)' }}>
             Made with care for

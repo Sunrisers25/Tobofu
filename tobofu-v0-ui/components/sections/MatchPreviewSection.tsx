@@ -74,7 +74,7 @@ export function MatchPreviewSection() {
             </h2>
             <p className="text-base leading-relaxed mb-8" style={{ color: '#3A1F1A' }}>
               Unlike generic platforms that show you hundreds of results,
-              Tobofu presents a thoughtful shortlist. Each profile has been
+              Samanvaya Bandhan presents a thoughtful shortlist. Each profile has been
               scored against your values, not just your filters.
             </p>
 
