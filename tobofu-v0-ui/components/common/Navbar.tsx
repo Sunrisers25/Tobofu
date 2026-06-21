@@ -40,16 +40,10 @@ export function Navbar({ isDashboard = false }: NavbarProps) {
   const loadNotifications = async () => {
     try {
       const currentUserId = getCurrentUserId()
-      console.log('Notification Check - currentUserId from localStorage:', currentUserId)
       if (currentUserId) {
-        console.log(`Notification Check - Fetching notifications for user: ${currentUserId}`)
         const data = await getNotifications(currentUserId)
-        console.log('Notification Check - API response data:', data)
         const notifs = Array.isArray(data) ? data : (data?.notifications || [])
-        console.log('Notification Check - parsed notifications array:', notifs)
         setNotifications(notifs)
-      } else {
-        console.log('Notification Check - No currentUserId found, skipping fetch.')
       }
     } catch (error) {
       console.error('Failed to load notifications', error)

@@ -26,11 +26,6 @@ export default function MatchesPage() {
     try {
       setIsLoading(true)
       const data = await getMyMatches(userId)
-
-      console.log("USER ID:", userId)
-      console.log("MATCHES API RESPONSE:", data)
-      console.log("IS ARRAY:", Array.isArray(data))
-
       setMatches(Array.isArray(data) ? data : data.matches || [])
     } catch (err: any) {
       setError('Failed to load matches.')

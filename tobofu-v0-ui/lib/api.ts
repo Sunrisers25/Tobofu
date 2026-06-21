@@ -1,7 +1,9 @@
 import axios from 'axios'
 
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000'
+
 const api = axios.create({
-  baseURL: "http://127.0.0.1:8000"
+  baseURL: API_BASE_URL
 })
 
 export const createUser = async (data: { name: string; email: string; google_id: string }) => {
@@ -11,6 +13,11 @@ export const createUser = async (data: { name: string; email: string; google_id:
 
 export const loginUser = async (data: { email: string; password?: string }) => {
   const response = await api.post('/login', data)
+  return response.data
+}
+
+export const googleAuth = async (data: { google_id: string; email: string; name: string; photo_url?: string }) => {
+  const response = await api.post('/auth/google', data)
   return response.data
 }
 

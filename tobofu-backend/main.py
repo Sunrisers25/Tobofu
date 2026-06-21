@@ -30,7 +30,8 @@ from schemas import (
     PreferenceCreate,
     PhotoCreate,
     SwipeCreate,
-    MessageCreate
+    MessageCreate,
+    GoogleAuth
 )
 
 # ----------------------------
@@ -122,6 +123,7 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:3000",
         "http://127.0.0.1:3000",
+        os.getenv("FRONTEND_URL", "http://localhost:3000")
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -225,6 +227,46 @@ def login_user(
         "user_id": existing_user.id
     }
 
+
+# ----------------------------
+# Google OAuth Login/Register
+# ----------------------------
+@app.post("/auth/google")
+def google_auth(
+    data: GoogleAuth,
+    db: Session = Depends(get_db)
+):
+    user = db.query(User).filter(User.google_id == data.google_id).first()
+    is_new_user = False
+    
+    if not user:
+        user = db.query(User).filter(User.email == data.email).first()
+        if user:
+            user.google_id = data.google_id
+            db.commit()
+            db.refresh(user)
+        else:
+            is_new_user = True
+            user = User(
+                name=data.name,
+                email=data.email,
+                google_id=data.google_id
+            )
+            db.add(user)
+            db.commit()
+            db.refresh(user)
+            
+    has_profile = False
+    if not is_new_user:
+        profile = db.query(Profile).filter(Profile.user_id == user.id).first()
+        if profile:
+            has_profile = True
+            
+    return {
+        "user_id": user.id,
+        "is_new_user": is_new_user,
+        "has_profile": has_profile
+    }
 
 # ----------------------------
 # Get All Users

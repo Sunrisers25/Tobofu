@@ -45,3 +45,4 @@ pnpm-debug.log*
 tobofu-backend/venv/
 tobofu-v0-ui/.next/
 tobofu-v0-ui/node_modules/
+tobofu-frontend-old/

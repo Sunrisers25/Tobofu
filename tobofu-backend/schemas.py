@@ -10,6 +10,13 @@ class UserCreate(BaseModel):
     google_id: str
 
 
+class GoogleAuth(BaseModel):
+    google_id: str
+    email: str
+    name: str
+    photo_url: str | None = None
+
+
 class UserLogin(BaseModel):
     email: str
     password: str

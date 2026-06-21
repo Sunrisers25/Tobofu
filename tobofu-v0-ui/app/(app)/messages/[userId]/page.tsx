@@ -52,8 +52,12 @@ export default function ChatPage() {
     let reconnectTimer: NodeJS.Timeout
 
     const connectWs = () => {
-      // Connect to WebSocket using standard browser API
-      socket = new WebSocket(`ws://localhost:8000/ws/${currentUserId}`)
+      // Connect to WebSocket using dynamic API URL
+      const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000'
+      const wsProtocol = API_URL.startsWith('https') ? 'wss' : 'ws'
+      const wsUrl = API_URL.replace(/^https?:\/\//, '')
+      
+      socket = new WebSocket(`${wsProtocol}://${wsUrl}/ws/${currentUserId}`)
 
       socket.onopen = () => {
         setIsOnline(true)
